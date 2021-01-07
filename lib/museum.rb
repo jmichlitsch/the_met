@@ -26,5 +26,22 @@ class Museum
       recommended_exhibits
   end
    # require 'pry'; binding.pry
-   def
+
+   def admit(patron)
+     @patrons << patron
+   end
+
+   def patrons_by_exhibit_interests
+     hash = { @x => [@y]}
+     @x = exhibits.map do |exhibit|
+          exhibit.name
+        end
+     @y = []
+     # patrons.each do |patron|
+     #   if patron.interests.include? exhibits
+     #     @y << patron
+     #   end
+     # end
+     hash
+   end
 end
