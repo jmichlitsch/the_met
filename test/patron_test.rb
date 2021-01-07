@@ -1,7 +1,7 @@
 require 'minitest/autorun'
 require 'minitest/pride'
-require './lib/museum'
+require './lib/patron'
 
-class MuseumTest < Minitest::Test
+class PatronTest < Minitest::Test
 
 end  
