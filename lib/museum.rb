@@ -31,17 +31,28 @@ class Museum
      @patrons << patron
    end
 
-   def patrons_by_exhibit_interests
-     hash = { @x => [@y]}
-     @x = exhibits.map do |exhibit|
-          exhibit.name
-        end
+   #Need to get this working with making a new instance of each exhibit
+  def patrons_by_exhibit_interests
+     hash = { exhibits => [@y]}
      @y = []
-     # patrons.each do |patron|
-     #   if patron.interests.include? exhibits
-     #     @y << patron
-     #   end
-     # end
+     patrons.each do |patron|
+       if patron.interests.include? exhibits
+         @y << patron
+       end
+     end
      hash
    end
+
+  def ticket_lottery_contestants(exhibit)
+     patrons_by_exhibit_interests.each
+     #need to get patrons_by_exhibit_interests working to use this
+   end
+
+  def draw_lottery_winner
+      #some code
+  end
+
+  def announce_lottery_winner
+    #some code
+  end  
 end
