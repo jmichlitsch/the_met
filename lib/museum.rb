@@ -2,12 +2,14 @@ require './lib/patron'
 require './lib/exhibit'
 
 class Museum
-  attr_accessor :exhibits
+  attr_accessor :exhibits,
+                :patrons
 
   attr_reader :name
   def initialize(name)
     @name = name
     @exhibits = []
+    @patrons = []
   end
 
   def add_exhibit(exhibit)
@@ -24,4 +26,5 @@ class Museum
       recommended_exhibits
   end
    # require 'pry'; binding.pry
+   def
 end
